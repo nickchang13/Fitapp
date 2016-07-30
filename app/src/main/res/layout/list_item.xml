@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        android:id="@+id/icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:text="Name"
+        android:id="@+id/name"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:text="10 Miles"
+        android:id="@+id/run"
+        android:layout_below="@+id/name"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_toEndOf="@+id/icon"/>
+
+    <ImageView
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/goToArrow"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+
+</RelativeLayout>
