@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        android:id="@+id/imageView"/>
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:hint="Name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/imageView">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/twitter"
+            android:id="@+id/twitterButton"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/fb"
+            android:id="@+id/fbButton"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/instagram"
+            android:id="@+id/instagramButton"/>
+    </LinearLayout>
+</RelativeLayout>

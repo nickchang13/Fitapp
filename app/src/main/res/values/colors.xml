@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="fail">#ff0018</color>
     <color name="good">#02ff01</color>
+    <color name="fabColor">#00ff4f</color>
 </resources>
