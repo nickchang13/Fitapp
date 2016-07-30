@@ -6,7 +6,7 @@
 
     <ImageView
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:src="@drawable/ic_account_circle_black_24dp"
         android:id="@+id/imageView"/>
 
@@ -20,34 +20,168 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"/>
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/nameTV"
+        android:layout_alignLeft="@+id/nameTV"
+        android:layout_alignStart="@+id/nameTV"
+        android:id="@+id/relativeLayout2">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/twitter"
+            android:id="@+id/twitterButton" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/fb"
+            android:id="@+id/fbButton"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/twitterButton"
+            android:layout_toEndOf="@+id/twitterButton"
+            android:layout_marginStart="30dp" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/instagram"
+            android:id="@+id/instagramButton"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/fbButton"
+            android:layout_toEndOf="@id/fbButton"
+            android:layout_marginStart="30dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"></RelativeLayout>
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_averages"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_below="@+id/imageView">
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:background="@color/cardview_light_background"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:src="@drawable/twitter"
-            android:id="@+id/twitterButton"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+                android:text="Averages"
+                android:id="@+id/avg_title"
+                android:gravity="bottom"
+                android:background="@color/material_blue_grey_800"
+                android:textColor="@color/abc_primary_text_material_dark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:id="@+id/avg_distance"
+                android:text="Distance: 5 miles"
+                android:layout_below="@id/avg_title" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:id="@+id/avg_time"
+                android:text="Time: 5 minutes"
+                android:layout_below="@id/avg_distance" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="Rate: 5 mph"
+                android:layout_below="@id/avg_time" />
+        </RelativeLayout>
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:src="@drawable/fb"
-            android:id="@+id/fbButton"/>
+    </android.support.v7.widget.CardView>
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:src="@drawable/instagram"
-            android:id="@+id/instagramButton"/>
-    </LinearLayout>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_bests"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@color/cardview_light_background"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+                android:text="Bests"
+                android:id="@+id/best_title"
+                android:gravity="bottom"
+                android:background="@color/material_blue_grey_800"
+                android:textColor="@color/abc_primary_text_material_dark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:id="@+id/best_distance"
+                android:text="Distance:"
+                android:layout_below="@id/best_title" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:id="@+id/best_time"
+                android:text="Time:"
+                android:layout_below="@id/best_distance" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="Rate:"
+                android:layout_below="@id/best_time" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/card_averages" />
+
+
 </RelativeLayout>
