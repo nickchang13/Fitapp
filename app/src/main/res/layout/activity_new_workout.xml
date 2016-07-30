@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/new_workout_text"
+        android:text="New Workout"
+        android:layout_centerHorizontal="true"
+        android:textSize="16pt"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/distance_edit"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:hint="Enter distance..."
+        android:layout_below="@id/new_workout_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/add_workout_button"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/distance_edit"
+        android:layout_marginTop="70dp"
+        android:text="ADD"
+        android:textSize="12pt"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:onClick="handleAdd"/>
+
+    <Button
+        android:id="@+id/cancel_workout_button"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/add_workout_button"
+        android:layout_marginTop="30dp"
+        android:text="CANCEL"
+        android:textSize="12pt"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:onClick="handleCancel"/>
+
+
+</RelativeLayout>
