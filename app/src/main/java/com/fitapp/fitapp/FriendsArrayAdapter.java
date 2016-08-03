@@ -26,17 +26,17 @@ public class FriendsArrayAdapter extends ArrayAdapter<Profile>
     public View getView(int position, View convertView, ViewGroup parent)
     {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView = inflater.inflate(R.layout.list_item, parent, false);
+        View rowView = inflater.inflate(R.layout.list_item_redone, parent, false);
         TextView name = (TextView) rowView.findViewById(R.id.name);
         TextView distance = (TextView) rowView.findViewById(R.id.run);
         name.setText(values[position].getName());
         distance.setText(values[position].getLastRunDistance() + " Miles");
         if(values[position].getStatus())
         {
-            rowView.setBackgroundColor(context.getResources().getColor(R.color.good));
+            name.setTextColor(context.getResources().getColor(android.R.color.holo_green_light));
         } else
         {
-            rowView.setBackgroundColor(context.getResources().getColor(R.color.fail));
+            name.setTextColor(context.getResources().getColor(android.R.color.holo_red_light));
         }
         return rowView;
     }
